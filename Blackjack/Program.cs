@@ -11,7 +11,7 @@ namespace Blackjack
         static void Main()
         {
             Deck deck = new Deck();
-            //deck.Shuffle(deck);
+            deck.Shuffle();
 
             foreach (var card in deck.Cards)
             {
