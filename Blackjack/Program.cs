@@ -12,12 +12,22 @@ namespace Blackjack
         {
             Deck deck = new Deck();
             deck.Shuffle();
-
-            foreach (var card in deck.Cards)
+            Player player = new Player
             {
-                Console.WriteLine("{0} {1} of {2}, worth {3}", card.Color, card.Face, card.Suit, card.CardValue);
+                PlayerName = "Dave",
+                Purse = 100.00m
+            };
+            Dealer dealer = new Dealer
+            {
+                Bank = 1000000.00m
+            };
 
-            }
+            Console.WriteLine($"Welcome {player.PlayerName}!\nYou are starting with ${player.Purse}");
+            Console.WriteLine("The house has ${0} as a bank", dealer.Bank);
+            //foreach (var card in deck.Cards)
+            //{
+            //    Console.WriteLine("{0} {1} of {2}, worth {3}", card.Color, card.Face, card.Suit, card.CardValue);
+            //}
             Console.Read();
         }
 

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Blackjack
 {
@@ -14,7 +11,7 @@ namespace Blackjack
         // Constructor.
         public Deck()
         {
-            // Create new instance of Cards property.
+            // Create new list of Cards.
             Cards = new List<Card>();
 
             // Iterate through suits.
@@ -72,14 +69,14 @@ namespace Blackjack
             {
                 // Generate a random number object.
                 Random randomNumber = new Random();
-                // Create a tempory list to store shuffled cards.
+                // Create a temp list to store shuffled cards.
                 var shuffledDeck = new List<Card>();
                 // Iterate while cards still exist in the deck.
                 while (Cards.Count > 0)
                 {
                     // Create a random index number.
                     int index = randomNumber.Next(0, Cards.Count);
-                    // Add the card at that index to the temporary list.
+                    // Add the card at that index to the temp list.
                     shuffledDeck.Add(Cards[index]);
                     // Remove the card from the deck.
                     Cards.RemoveAt(index);

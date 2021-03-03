@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blackjack
+﻿namespace Blackjack
 {
     class Card
     {
+        // Properties.
         public Suit Suit { get; set; }
         public Face Face { get; set; }
         public string Color { get; set; }
         public int CardValue { get; set; }
     }
 
+    // Card Suits.
     public enum Suit
     {
         clubs,
@@ -22,6 +18,7 @@ namespace Blackjack
         hearts
     }
 
+    // Card Faces.
     public enum Face
     {
         ace,

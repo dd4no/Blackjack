@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Blackjack
 {
-    class Game
+    class Dealer
     {
-        public string GameName { get; set; }
-        public List<Player> Players { get; set; } = new List<Player>();
-
+        public decimal Bank { get; set; }
+        public List<Card> DealerHand { get; set; } = new List<Card>();
     }
 }
