@@ -64,9 +64,29 @@ namespace Blackjack
             }
         }
 
-        //public void Shuffle(Deck deck)
-        //{
-        //    Random
-        //}
+        // Shuffle Method.
+        public void Shuffle(int times = 1)
+        {
+            // Shuffle deck number of specified times (default = once).
+            for (var i = 0; i < times; i++)
+            {
+                // Generate a random number object.
+                Random randomNumber = new Random();
+                // Create a tempory list to store shuffled cards.
+                var shuffledDeck = new List<Card>();
+                // Iterate while cards still exist in the deck.
+                while (Cards.Count > 0)
+                {
+                    // Create a random index number.
+                    int index = randomNumber.Next(0, Cards.Count);
+                    // Add the card at that index to the temporary list.
+                    shuffledDeck.Add(Cards[index]);
+                    // Remove the card from the deck.
+                    Cards.RemoveAt(index);
+                }
+                // Replace the deck with the shuffled deck.
+                Cards = shuffledDeck;
+            }
+        }
     }
 }
