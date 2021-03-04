@@ -3,11 +3,8 @@ using System.Collections.Generic;
 
 namespace Blackjack
 {
-    class Deck
+    public class Deck
     {
-        // Property.
-        public List<Card> Cards { get; set; } = new List<Card>();
-        
         // Constructor.
         public Deck()
         {
@@ -31,7 +28,7 @@ namespace Blackjack
                     Cards.Add(card);
                 }
             }
-            
+
             // Iterate through deck to assign color and value.
             foreach (Card card in Cards)
             {
@@ -61,6 +58,10 @@ namespace Blackjack
             }
         }
 
+        // Property.
+        public List<Card> Cards { get; set; } = new List<Card>();
+        
+
         // Shuffle Method.
         public void Shuffle(int times = 1)
         {
@@ -69,14 +70,14 @@ namespace Blackjack
             {
                 // Generate a random number object.
                 Random randomNumber = new Random();
-                // Create a temp list to store shuffled cards.
+                // Create a new list to store shuffled cards.
                 var shuffledDeck = new List<Card>();
                 // Iterate while cards still exist in the deck.
                 while (Cards.Count > 0)
                 {
                     // Create a random index number.
                     int index = randomNumber.Next(0, Cards.Count);
-                    // Add the card at that index to the temp list.
+                    // Add the card at that index to the new list.
                     shuffledDeck.Add(Cards[index]);
                     // Remove the card from the deck.
                     Cards.RemoveAt(index);
@@ -84,6 +85,15 @@ namespace Blackjack
                 // Replace the deck with the shuffled deck.
                 Cards = shuffledDeck;
             }
+        }
+
+        // Deal Method.
+        public void Deal(List<Card> hand)
+        {
+            // Add last (top) card from deck to hand.
+            hand.Add(Cards[Cards.Count - 1]);
+            // Remove card from the deck.
+            Cards.RemoveAt(Cards.Count - 1);
         }
     }
 }

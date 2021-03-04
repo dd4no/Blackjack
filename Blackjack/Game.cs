@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Blackjack
 {
-    class Game
+    public abstract class Game
     {
         public string GameName { get; set; }
         public List<Player> Players { get; set; } = new List<Player>();
+
+        public abstract void Play();
 
     }
 }
