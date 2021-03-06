@@ -1,0 +1,38 @@
+Cards = new List<Card>();
+
+Card card1 = new Card();
+card1.Face = Face.Jack;
+card1.CardValue = 10;
+Cards.Add(card1);
+
+Card card2 = new Card();
+card2.Face = Face.King;
+card2.CardValue = 10;
+Cards.Add(card2);
+
+Card card3 = new Card();
+card3.Face = Face.Ace;
+card3.CardValue = 1;
+Cards.Add(card3);
+
+Card card4 = new Card();
+card4.Face = Face.Ace;
+card4.CardValue = 1;
+Cards.Add(card4)
+
+Card card5 = new Card();
+card5.Face = Face.Ace;
+card5.CardValue = 1;
+Cards.Add(card5)
+
+Card card6 = new Card();
+card6.Face = Face.Ace;
+card6.CardValue = 1;
+Cards.Add(card6)
+
+Card card7 = new Card();
+card7.Face = Face.Ace;
+card7.CardValue = 1;
+Cards.Add(card7)
+
+            

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Blackjack
 {
@@ -8,5 +9,6 @@ namespace Blackjack
         public decimal Purse { get; set; }
         public List<Card> PlayerHand { get; set; } = new List<Card>();
         public bool IsActive { get; set; }
+
     }
 }
