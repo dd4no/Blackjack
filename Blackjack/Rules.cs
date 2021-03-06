@@ -25,7 +25,7 @@ namespace Blackjack
                 int face = (int)card.Face;
                 if (card.Face == 0 && sum <= 21 && sum < 11)
                 {
-                    card.CardValue += 10;
+                    card.CardValue = 11;
                 }
                 sum += card.CardValue;
             }
@@ -40,21 +40,23 @@ namespace Blackjack
             }
             else return false;
         }
-            
 
         public static void PlayerWin()
         {
             Console.WriteLine("You win!");
+            //Console.ReadLine();
         }
 
         public static void Push()
         {
             Console.WriteLine("No one wins.");
+            //Console.ReadLine();
         }
 
         public static void HouseWin()
         {
             Console.WriteLine("House wins.");
+            //Console.ReadLine();
         }
 
 

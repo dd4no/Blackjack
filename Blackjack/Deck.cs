@@ -5,6 +5,68 @@ namespace Blackjack
 {
     public class Deck
     {
+        // Test Deck Constructor
+        //public Deck()
+        //{
+        //    Cards = new List<Card>();
+
+        //    // Player 1
+        //    Card card1 = new Card();
+        //    card1.Face = Face.Two;
+        //    card1.CardValue = 2;
+        //    Cards.Add(card1);
+
+        //    Card card2 = new Card();
+        //    card2.Face = Face.Ten;
+        //    card2.CardValue = 10;
+        //    Cards.Add(card2);
+
+        //    // Player 2
+        //    Card card3 = new Card();
+        //    card3.Face = Face.Ace;
+        //    card3.CardValue = 1;
+        //    Cards.Add(card3);
+
+        //    Card card4 = new Card();
+        //    card4.Face = Face.Ace;
+        //    card4.CardValue = 1;
+        //    Cards.Add(card4);
+
+
+        //    // Draw
+        //    Card card5 = new Card();
+        //    card5.Face = Face.Ace;
+        //    card5.CardValue = 1;
+        //    Cards.Add(card5);
+
+        //    Card card6 = new Card();
+        //    card6.Face = Face.Ace;
+        //    card6.CardValue = 1;
+        //    Cards.Add(card6);
+
+        //    Card card7 = new Card();
+        //    card7.Face = Face.Ace;
+        //    card7.CardValue = 1;
+        //    Cards.Add(card7);
+
+        //    Card card8 = new Card();
+        //    card8.Face = Face.Ace;
+        //    card8.CardValue = 1;
+        //    Cards.Add(card8);
+
+        //    Card card9 = new Card();
+        //    card9.Face = Face.Six;
+        //    card9.CardValue = 6;
+        //    Cards.Add(card9);
+
+        //    Card card0 = new Card();
+        //    card0.Face = Face.Six;
+        //    card0.CardValue = 6;
+        //    Cards.Add(card0);
+
+        //}
+
+
         // Constructor.
         public Deck()
         {
@@ -90,10 +152,15 @@ namespace Blackjack
         // Deal Method.
         public void Deal(List<Card> hand)
         {
+            //if (Cards.Count = 0)
+            //{ 
+            //    Deck deck = new Deck();
+            //    deck.Shuffle();
+            //}
             // Add last (top) card from deck to hand.
-            hand.Add(Cards[Cards.Count - 1]);
+            hand.Add(Cards[0]);
             // Remove card from the deck.
-            Cards.RemoveAt(Cards.Count - 1);
+            Cards.RemoveAt(0);
         }
     }
 }
